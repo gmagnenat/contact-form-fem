@@ -52,16 +52,30 @@ Users should be able to:
 
 ### What I learned
 
+During this project, I learned how to:
+
+- Implement form validation using JavaScript
+- Use ARIA attributes to improve accessibility
+- Create responsive layouts using CSS Grid and Flexbox
+- Handle form submissions and display success/error messages
+
 ### Continued development
 
+In future projects, I want to continue improving my skills in:
+
+- Advanced form validation techniques
+- Enhancing accessibility for all users
+- Optimizing performance for large forms
+
 ### Useful resources
+
+- [MDN Web Docs - Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) - This helped me understand how to implement form validation.
+- [A11Y Project - Accessibility Checklist](https://www.a11yproject.com/checklist/) - This resource provided valuable insights on making the form accessible.
 
 ## Author
 
 - Website - [Gwenaël Magnenat](https://gmagnenat.com)
 - Frontend Mentor - [@gmagnenat](https://www.frontendmentor.io/profile/gmagnenat)
 - LinkedIn - [@gmagnenat](https://linkedin.com/in/gmagnenat)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
