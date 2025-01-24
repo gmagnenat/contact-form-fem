@@ -1,0 +1,16 @@
+@use "./variables" as *;
+
+body {
+  background-color: $clr-green-200;
+  padding: 1rem;
+}
+
+main {
+  font-family: $ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  width: 100%;
+}

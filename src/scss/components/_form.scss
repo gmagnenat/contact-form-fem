@@ -1,0 +1,156 @@
+@use "../variables" as *;
+
+input,
+textarea {
+  border: 1px solid $clr-green-600;
+  border-radius: 8px;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  padding: 0.75rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid $clr-green-600;
+  outline-offset: 2px;
+  outline-style: dotted;
+}
+
+input[type="radio"] {
+  appearance: none;
+
+  border-radius: 9999px;
+  border: 1px solid $clr-neutral-500;
+  padding: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+input[type="radio"]:checked {
+  border: transparent;
+  background: url(../../../assets/images/icon-radio-selected.svg) no-repeat
+    center center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+
+  padding: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 0;
+  border: 2px solid $clr-neutral-500;
+}
+
+input[type="checkbox"]:checked {
+  background: url(../../../assets/images/icon-checkbox-check.svg) no-repeat
+    center center;
+  border: transparent;
+}
+
+svg#definition {
+  display: none;
+}
+
+fieldset {
+  border: transparent;
+  padding: 0;
+}
+
+.icon-required {
+  color: $clr-green-600;
+  width: 5px;
+  height: 5px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  width: 100%;
+  max-width: 46rem;
+  background-color: $clr-neutral-100;
+  border-radius: 10px;
+  padding: 2.5rem;
+  gap: 1rem;
+  box-shadow: $shadow-xl;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group--query-type {
+  display: grid;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.query-type__option {
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid $clr-green-600;
+  border-radius: 8px;
+  padding: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.query-type__option:has(input[type="radio"]:checked) {
+  background-color: $clr-green-200;
+}
+
+.form-group--query-type label::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.form-group--consent {
+  gap: 0.5rem;
+}
+
+.form-label,
+.fieldset-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error {
+  color: $clr-red-400;
+}
+
+.highlighted {
+  border-color: $clr-red-400;
+}
+
+@media screen and (min-width: 40rem) {
+  .contact-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-group--first-name {
+    grid-column: 1 / 2;
+  }
+
+  .form-group--last-name {
+    grid-column: 2 / 3;
+  }
+
+  .form-group--email,
+  .form-group--query-type,
+  .form-group--message,
+  .form-group--consent,
+  .form-group--submit {
+    grid-column: 1 / 3;
+  }
+
+  .form-group--query-type {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
