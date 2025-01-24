@@ -4,45 +4,4 @@
 
 @use "./components/form" as *;
 @use "./components/button" as *;
-
-@use "sass:color";
-
-dialog[open] {
-  opacity: 1;
-  transform: translate(-50%, 0);
-  position: absolute;
-  top: 5%;
-  left: 50%;
-}
-
-dialog {
-  opacity: 0;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: $clr-green-600;
-  border: transparent;
-  color: $clr-neutral-100;
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out,
-    overlay 0.2s ease-in-out, display 0.2s ease-in-out;
-}
-
-@starting-style {
-  dialog[open] {
-    opacity: 0;
-    transform: translate(-50%, 0);
-  }
-}
-
-.dialog__content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.dialog__heading {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
+@use "./components/dialog" as *;

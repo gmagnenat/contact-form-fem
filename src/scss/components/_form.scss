@@ -28,8 +28,8 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   border: transparent;
-  background: url(../../../assets/images/icon-radio-selected.svg) no-repeat
-    center center;
+  background: url("/src/assets/images/icon-radio-selected.svg") no-repeat center
+    center;
 }
 
 input[type="checkbox"] {
@@ -43,8 +43,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-  background: url(../../../assets/images/icon-checkbox-check.svg) no-repeat
-    center center;
+  background: url("/src/assets/images/icon-checkbox-check.svg") no-repeat center
+    center;
   border: transparent;
 }
 
