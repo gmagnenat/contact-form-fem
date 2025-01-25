@@ -5,7 +5,7 @@ textarea {
   border: 1px solid $clr-green-600;
   border-radius: 8px;
   line-height: 1.5;
-  font-size: 1.125rem;
+  font-size: 1rem;
   padding: 0.75rem;
 }
 
@@ -34,10 +34,10 @@ input[type="radio"]:checked {
 
 input[type="checkbox"] {
   appearance: none;
-
   padding: 0;
   width: 1.125rem;
   height: 1.125rem;
+  aspect-ratio: 1;
   border-radius: 0;
   border: 2px solid $clr-neutral-500;
 }
@@ -71,7 +71,7 @@ fieldset {
   max-width: 46rem;
   background-color: $clr-neutral-100;
   border-radius: 10px;
-  padding: 2.5rem;
+  padding: 1.5rem;
   gap: 1rem;
   box-shadow: $shadow-xl;
 }
@@ -112,7 +112,21 @@ fieldset {
 }
 
 .form-group--consent {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 0.5rem;
+}
+
+.form-group--consent .form-label {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group--consent .form-label span svg {
+  display: inline-block;
+  top: -5px;
+  position: relative;
+  margin-left: 5px;
 }
 
 .form-label,
@@ -145,7 +159,6 @@ fieldset {
   .form-group--email,
   .form-group--query-type,
   .form-group--message,
-  .form-group--consent,
   .form-group--submit {
     grid-column: 1 / 3;
   }
