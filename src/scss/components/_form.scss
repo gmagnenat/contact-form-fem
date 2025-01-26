@@ -2,15 +2,22 @@
 
 input,
 textarea {
-  border: 1px solid $clr-green-600;
+  border: 1px solid $clr-neutral-500;
   border-radius: 8px;
   line-height: 1.5;
   font-size: 1rem;
   padding: 0.75rem;
+  cursor: pointer;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid $clr-green-600;
 }
 
 input:focus,
 textarea:focus {
+  border: 1px solid $clr-green-600;
   outline: 2px solid $clr-green-600;
   outline-offset: 2px;
   outline-style: dotted;
@@ -122,7 +129,7 @@ fieldset {
   gap: 1rem;
 }
 
-.form-group--consent .form-label span svg {
+.form-group--consent .icon-required {
   display: inline-block;
   top: -5px;
   position: relative;
@@ -147,6 +154,7 @@ fieldset {
 @media screen and (min-width: 40rem) {
   .contact-form {
     grid-template-columns: repeat(2, 1fr);
+    padding: 2.5rem;
   }
   .form-group--first-name {
     grid-column: 1 / 2;
@@ -159,7 +167,8 @@ fieldset {
   .form-group--email,
   .form-group--query-type,
   .form-group--message,
-  .form-group--submit {
+  .form-group--submit,
+  .form-group--consent {
     grid-column: 1 / 3;
   }
 

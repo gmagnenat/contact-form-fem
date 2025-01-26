@@ -13,6 +13,7 @@ export function displayErrors<T>(
     const inputElement = form.querySelector(
       `[name="${key as string}"]`
     ) as HTMLElement;
+    inputElement?.classList.add("highlighted");
 
     if (errorDiv) {
       const errorMessages = ((errors as any)[key]?._errors as string[]) || [];
