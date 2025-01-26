@@ -6,9 +6,14 @@ export function displayErrors<T>(
 ): void {
   let firstErrorElement: HTMLElement | null = null;
 
+  /**
+   * key : first-name
+   * errorDiv: first-name-error
+   */
+
   (Object.keys(errors) as Array<keyof T>).forEach((key) => {
     const errorDiv = form.querySelector(
-      `.${key as string}__error`
+      `#${key as string}-error`
     ) as HTMLDivElement;
     const inputElement = form.querySelector(
       `[name="${key as string}"]`

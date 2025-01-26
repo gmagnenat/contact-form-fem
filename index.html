@@ -21,7 +21,7 @@
         <h1>Contact Us</h1>
         <svg id="definition" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <symbol id="required" viewbox="0 0 128 128">
+            <symbol id="required" viewBox="0 0 128 128">
               <g>
                 <path
                   d="M110.1,16.4L75.8,56.8l0.3,1l50.6-10.2v32.2l-50.9-8.9l-0.3,1l34.7,39.1l-28.3,16.5L63.7,78.2L63,78.5   l-18.5,49L17.2,111l34.1-39.8v-0.6l-50,9.2V47.6l49.3,9.9l0.3-0.6L17.2,16.7L45.5,0.5l17.8,48.7H64L82.1,0.5L110.1,16.4z"
@@ -43,15 +43,15 @@
           ></label>
           <input
             type="text"
-            id="firstName"
-            name="firstName"
-            class="firstName"
+            id="first-name"
+            name="first-name"
+            class="input input--first-name"
             autocomplete="given-name"
             aria-required="true"
-            aria-describedby="firstName__error"
+            aria-describedby="first-name-error"
             required
           />
-          <div id="firstName__error" class="firstName__error error"></div>
+          <div id="first-name-error" class="error-message"></div>
         </div>
         <div class="form-group form-group--last-name">
           <label for="last-name" class="form-label"
@@ -67,15 +67,15 @@
           </label>
           <input
             type="text"
-            id="lastName"
-            class="lastName"
-            name="lastName"
+            id="last-name"
+            class="input input--last-name"
+            name="last-name"
             autocomplete="family-name"
             aria-required="true"
-            aria-describedby="lastName__error"
+            aria-describedby="last-name-error"
             required
           />
-          <div id="lastName__error" class="lastName__error error"></div>
+          <div id="last-name-error" class="error-message"></div>
         </div>
         <div class="form-group form-group--email">
           <label for="email" class="form-label"
@@ -92,18 +92,18 @@
           <input
             type="email"
             id="email"
-            class="email"
+            class="input input--email"
             name="email"
             autocomplete="email"
             aria-required="true"
-            aria-describedby="email__error"
+            aria-describedby="email-error"
             required
           />
-          <div id="email__error" class="email__error error"></div>
+          <div id="email-error" class="error-message"></div>
         </div>
         <fieldset class="form-group form-group--query-type">
           <legend class="fieldset-legend">
-            Query Type
+            <span>Query Type</span>
             <svg
               class="icon-required"
               role="img"
@@ -113,31 +113,34 @@
               <use xlink:href="#required"></use>
             </svg>
           </legend>
-          <div class="query-type__option">
-            <input
-              type="radio"
-              id="general-enquiry"
-              class="queryType"
-              name="queryType"
-              value="general-enquiry"
-              aria-describedby="query-type__error"
-              required
-            />
-            <label for="general-enquiry">General Enquiry</label>
+          <div class="radiogroup" role="radiogroup">
+            <div class="query-type__option">
+              <input
+                type="radio"
+                id="general-enquiry"
+                class="input--query-type"
+                name="query-type"
+                value="general-enquiry"
+                aria-describedby="query-type-error"
+                required
+              />
+              <label for="general-enquiry">General Enquiry</label>
+            </div>
+            <div class="query-type__option">
+              <input
+                type="radio"
+                id="support-request"
+                class="input--query-type"
+                name="query-type"
+                value="support-request"
+                aria-describedby="query-type-error"
+                required
+              />
+              <label for="support-request">Support Request</label>
+            </div>
           </div>
-          <div class="query-type__option">
-            <input
-              type="radio"
-              id="support-request"
-              class="queryType"
-              name="queryType"
-              value="support-request"
-              aria-describedby="query-type__error"
-              required
-            />
-            <label for="support-request">Support Request</label>
-          </div>
-          <div id="queryType__error" class="queryType__error error"></div>
+
+          <div id="query-type-error" class="error-message"></div>
         </fieldset>
         <div class="form-group form-group--message">
           <label for="message" class="form-label"
@@ -153,20 +156,23 @@
           </label>
           <textarea
             id="message"
-            class="message"
+            class="textarea textarea--message"
             name="message"
+            aria-describedby="message-error"
             rows="4"
             required
           ></textarea>
-          <div id="message__error" class="message__error error"></div>
+          <div id="message-error" class="error-message"></div>
         </div>
         <div class="form-group--consent">
-          <label for="consent" class="form-label">
+          <label id="consent-label" for="consent" class="form-label">
             <input
               type="checkbox"
               id="consent"
-              class="consent"
+              class="input input--consent"
               name="consent"
+              aria-labelledby="consent-label"
+              aria-describedby="consent-error"
               required
             />
             <span
@@ -181,7 +187,7 @@
               </svg>
             </span>
           </label>
-          <div id="consent__error" class="consent__error error"></div>
+          <div id="consent-error" class="error-message"></div>
         </div>
         <div class="form-group form-group--submit">
           <button class="btn" type="submit">Submit</button>
@@ -213,7 +219,7 @@
             Message sent!
           </h2>
           <p>We will be in touch shortly.</p>
-          <button class="btn--dialog close" type="button">Close</button>
+          <button class="btn--dialog-close" type="button">Close</button>
         </div>
       </dialog>
     </main>

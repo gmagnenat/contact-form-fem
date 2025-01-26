@@ -1,11 +1,21 @@
 export function getDOMElements() {
   const form = document.querySelector(".contact-form")! as HTMLFormElement;
-  const firstName = document.querySelector(".firstName")! as HTMLInputElement;
-  const lastName = document.querySelector(".lastName")! as HTMLInputElement;
-  const email = document.querySelector(".email")! as HTMLInputElement;
-  const queryType = document.querySelector(".queryType")! as HTMLInputElement;
-  const message = document.querySelector(".message")! as HTMLTextAreaElement;
-  const consent = document.querySelector(".consent")! as HTMLInputElement;
+  const firstName = document.querySelector(
+    ".input--first-name"
+  )! as HTMLInputElement;
+  const lastName = document.querySelector(
+    ".input--last-name"
+  )! as HTMLInputElement;
+  const email = document.querySelector(".input--email")! as HTMLInputElement;
+  const queryType = document.querySelector(
+    ".input--query-type"
+  )! as HTMLInputElement;
+  const message = document.querySelector(
+    ".textarea--message"
+  )! as HTMLTextAreaElement;
+  const consent = document.querySelector(
+    ".input--consent"
+  )! as HTMLInputElement;
   const dialog = document.querySelector(".dialog")! as HTMLDialogElement;
 
   if (

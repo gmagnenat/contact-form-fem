@@ -89,9 +89,13 @@ fieldset {
   gap: 0.5rem;
 }
 
-.form-group--query-type {
+.radiogroup {
   display: grid;
   gap: 1rem;
+}
+
+.form-group--query-type {
+  display: grid;
   padding-top: 0.5rem;
 }
 
@@ -143,7 +147,7 @@ fieldset {
   gap: 0.5rem;
 }
 
-.error {
+.error-message {
   color: $clr-red-400;
 }
 
@@ -173,6 +177,10 @@ fieldset {
   }
 
   .form-group--query-type {
+    // grid-template-columns: repeat(2, 1fr);
+  }
+
+  .radiogroup {
     grid-template-columns: repeat(2, 1fr);
   }
 }
