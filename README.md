@@ -49,22 +49,23 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Typescript
+- Zod
 
 ### What I learned
 
 During this project, I learned how to:
 
-- Implement form validation using JavaScript
+- Implement form validation using Zod
 - Use ARIA attributes to improve accessibility
-- Create responsive layouts using CSS Grid and Flexbox
-- Handle form submissions and display success/error messages
+- implement a "toast like" success message with a dialog element
 
 ### Continued development
 
 In future projects, I want to continue improving my skills in:
 
+- Typescript and design patterns
 - Advanced form validation techniques
-- Enhancing accessibility for all users
 - Optimizing performance for large forms
 
 ### Useful resources
@@ -77,5 +78,3 @@ In future projects, I want to continue improving my skills in:
 - Website - [Gwenaël Magnenat](https://gmagnenat.com)
 - Frontend Mentor - [@gmagnenat](https://www.frontendmentor.io/profile/gmagnenat)
 - LinkedIn - [@gmagnenat](https://linkedin.com/in/gmagnenat)
-
-## Acknowledgments
